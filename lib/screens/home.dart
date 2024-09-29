@@ -174,7 +174,7 @@ class Drawer3DState extends State<Drawer3D>
         children: [
           TileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', // OSMF's Tile Server
-            // userAgentPackageName: 'com.emerginginnovatorshub.studycoin',
+            userAgentPackageName: 'com.emerginginnovatorshub.studycoin',
           ),
           RichAttributionWidget(
             attributions: [
@@ -305,7 +305,7 @@ Container(
                                         ),
                                         SizedBox(height: 5), // Add some spacing between the texts
                                         Text(
-                                          "@nathfavour", // Replace with your desired text
+                                          "@studycoin", // Replace with your desired text
                                           style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.normal,
@@ -690,7 +690,7 @@ Container(
                     Opacity(
                       opacity: 1 - _animator.value,
                       child: const Text(
-                        " STUDYCOIN GO",
+                        " STUDYCOIN MAP",
                         style: TextStyle(fontWeight: FontWeight.w900),
                       ),
                     ),
@@ -745,7 +745,7 @@ Container(
                   children: [
                     // Ride Details
                     const Text(
-                      'Your driver is coming in 4 minutes',
+                      ' Locations of schools for funding in Nigeria',
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
@@ -760,9 +760,9 @@ Container(
                         const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(' Mr. Callistus Igwe', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                            Text(' Lexus Jeep (Black)', style: TextStyle(fontSize: 14)),
-                            Text('Rating: 4.5', style: TextStyle(fontSize: 14)),
+                            Text(' Country: Nigeria', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                            Text(' Chosen Location: ', style: TextStyle(fontSize: 14)),
+                            Text('Fund urgency rating:', style: TextStyle(fontSize: 14)),
                           ],
                         ),
                         const Spacer(),

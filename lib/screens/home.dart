@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:image_sequence_animator/image_sequence_animator.dart';
@@ -168,14 +167,14 @@ class Drawer3DState extends State<Drawer3D>
   Widget _buildBackground() {
     return Positioned.fill(
       child: FlutterMap(
-        options: MapOptions(
+        options: const MapOptions(
           initialCenter: LatLng(51.509364, -0.128928), // Center the map over London
           initialZoom: 9.2,
         ),
         children: [
           TileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', // OSMF's Tile Server
-            userAgentPackageName: 'com.bainaryglobe.vexeroo',
+            // userAgentPackageName: 'com.emerginginnovatorshub.studycoin',
           ),
           RichAttributionWidget(
             attributions: [
@@ -259,13 +258,13 @@ Container(
     boxShadow: [
       BoxShadow(
         color: Colors.black.withOpacity(0.3), // Shadow color
-        offset: Offset(0, 8), // Horizontal and vertical offset
+        offset: const Offset(0, 8), // Horizontal and vertical offset
         blurRadius: 13, // Blur radius
         spreadRadius: 3, // Spread radius
       ),
       BoxShadow(
         color: Colors.black.withOpacity(0.1), // Additional shadow for more depth
-        offset: Offset(0, 2), // Slightly different offset
+        offset: const Offset(0, 2), // Slightly different offset
         blurRadius: 5, // Slightly different blur radius
         spreadRadius: 1, // Slightly different spread radius
       ),
@@ -279,12 +278,12 @@ Container(
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      CircleAvatar(
-                                        backgroundImage: AssetImage('assets/vexeroo.png'), // Replace with your avatar image
+                                      const CircleAvatar(
+                                        backgroundImage: AssetImage('assets/logo.png'), // Replace with your avatar image
                                         radius: 40,
                                       ),
                                       IconButton(
-                                        icon: Icon(Icons.brightness_6), // Theme switcher icon
+                                        icon: const Icon(Icons.brightness_6), // Theme switcher icon
                                         onPressed: () {
                                           // Add your theme switcher logic here
                                         },
@@ -292,20 +291,20 @@ Container(
                                     ],
                                   ),
                                   const SizedBox(height: 10),
-                                  Align(
+                                  const Align(
                                     alignment: Alignment.centerLeft,
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
-                                          "Nathaniel Favour",
+                                        Text(
+                                          " Studycoin ",
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        const SizedBox(height: 5), // Add some spacing between the texts
-                                        const Text(
+                                        SizedBox(height: 5), // Add some spacing between the texts
+                                        Text(
                                           "@nathfavour", // Replace with your desired text
                                           style: TextStyle(
                                             fontSize: 16,
@@ -350,14 +349,14 @@ Container(
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.green[900]!,
-                                          offset: Offset(0, 4),
+                                          offset: const Offset(0, 4),
                                           blurRadius: 4,
                                         ),
                                       ],
                                     ),
                                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                     child: const Text(
-                                      "SEE NIGERIA",
+                                      "SEE MAPS",
                                       style: TextStyle(
                                         fontSize: 18,
                                         color: Colors.white,
@@ -408,14 +407,14 @@ Container(
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.green[900]!,
-                                          offset: Offset(0, 4),
+                                          offset: const Offset(0, 4),
                                           blurRadius: 4,
                                         ),
                                       ],
                                     ),
                                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                     child: const Text(
-                                      "VX HOMES",
+                                      "SCHOOLS",
                                       style: TextStyle(
                                         fontSize: 18,
                                         color: Colors.white,
@@ -461,14 +460,14 @@ Container(
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.green[900]!,
-                                          offset: Offset(0, 4),
+                                          offset: const Offset(0, 4),
                                           blurRadius: 4,
                                         ),
                                       ],
                                     ),
                                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                     child: const Text(
-                                      "VX CARS",
+                                      "FUNDINGS",
                                       style: TextStyle(
                                         fontSize: 18,
                                         color: Colors.white,
@@ -502,14 +501,14 @@ Container(
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.green[900]!,
-                                          offset: Offset(0, 4),
+                                          offset: const Offset(0, 4),
                                           blurRadius: 4,
                                         ),
                                       ],
                                     ),
                                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                     child: const Text(
-                                      "VX FIT",
+                                      "STUDENTS",
                                       style: TextStyle(
                                         fontSize: 18,
                                         color: Colors.white,
@@ -530,14 +529,14 @@ Container(
                                       boxShadow: [
                                         BoxShadow(
                                           color: Colors.green[900]!,
-                                          offset: Offset(0, 4),
+                                          offset: const Offset(0, 4),
                                           blurRadius: 4,
                                         ),
                                       ],
                                     ),
                                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                     child: const Text(
-                                      "VX RENT",
+                                      "HISTORY",
                                       style: TextStyle(
                                         fontSize: 18,
                                         color: Colors.white,
@@ -558,11 +557,11 @@ Container(
                                 padding: const EdgeInsets.symmetric(vertical: 10),
                                 child: InkWell(
                                   onTap: () {},
-                                  child: Row(
+                                  child: const Row(
                                     children: [
-                                      const Icon(Icons.info, color: Colors.black),
-                                      const SizedBox(width: 10),
-                                      const Text(
+                                      Icon(Icons.info, color: Colors.black),
+                                      SizedBox(width: 10),
+                                      Text(
                                         "ABOUT",
                                         style: TextStyle(
                                           fontSize: 16,
@@ -578,11 +577,11 @@ Container(
                                 padding: const EdgeInsets.symmetric(vertical: 10),
                                 child: InkWell(
                                   onTap: () {},
-                                  child: Row(
+                                  child: const Row(
                                     children: [
-                                      const Icon(Icons.support, color: Colors.black),
-                                      const SizedBox(width: 10),
-                                      const Text(
+                                      Icon(Icons.support, color: Colors.black),
+                                      SizedBox(width: 10),
+                                      Text(
                                         "SUPPORT",
                                         style: TextStyle(
                                           fontSize: 16,
@@ -598,11 +597,11 @@ Container(
                                 padding: const EdgeInsets.symmetric(vertical: 10),
                                 child: InkWell(
                                   onTap: () {},
-                                  child: Row(
+                                  child: const Row(
                                     children: [
-                                      const Icon(Icons.logout, color: Colors.black),
-                                      const SizedBox(width: 10),
-                                      const Text(
+                                      Icon(Icons.logout, color: Colors.black),
+                                      SizedBox(width: 10),
+                                      Text(
                                         "LOGOUT",
                                         style: TextStyle(
                                           fontSize: 16,
@@ -691,7 +690,7 @@ Container(
                     Opacity(
                       opacity: 1 - _animator.value,
                       child: const Text(
-                        " VEXEROO GO",
+                        " STUDYCOIN GO",
                         style: TextStyle(fontWeight: FontWeight.w900),
                       ),
                     ),
@@ -726,7 +725,7 @@ Container(
         maxChildSize: 0.5, // Maximum height is 1/2 of the screen
         builder: (BuildContext context, ScrollController scrollController) {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
               boxShadow: [
@@ -745,7 +744,7 @@ Container(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Ride Details
-                    Text(
+                    const Text(
                       'Your driver is coming in 4 minutes',
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
@@ -753,12 +752,12 @@ Container(
                     // Driver Information
                     Row(
                       children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage('assets/avatar/nathfavour.png'), // Replace with driver's avatar image
+                        const CircleAvatar(
+                          backgroundImage: AssetImage('assets/logo.png'), // Replace with driver's avatar image
                           radius: 30,
                         ),
                         const SizedBox(width: 10),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(' Mr. Callistus Igwe', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
@@ -767,12 +766,12 @@ Container(
                           ],
                         ),
                         const Spacer(),
-                        Image.asset('assets/side/car.webp', width: 60, height: 60), // Replace with car image
+                        Image.asset('assets/logo.png', width: 60, height: 60), // Replace with car image
                       ],
                     ),
                     const SizedBox(height: 20),
 
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -791,19 +790,19 @@ Container(
                     const SizedBox(height: 10),
 
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: Colors.green.withOpacity(0.2), // Highlight color
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Row(
                         children: [
-                          Image.asset('assets/images/mastercard-2.png', width: 30, height: 30), // Replace with your Mastercard icon
+                          Image.asset('assets/logo.png', width: 30, height: 30), // Replace with your Mastercard icon
                           const SizedBox(width: 10),
                           // Icon(Icons.credit_card, size: 30),
                           const SizedBox(width: 10),
 
-                          Column(
+                          const Column(
                             children: [
                               Text('**** **** **** 1234', style: TextStyle(fontSize: 16)),
                               Align(
@@ -824,25 +823,25 @@ Container(
                     // Additional Details (Visible when dragged up)
                     AnimatedOpacity(
                       opacity: 1.0, // Change this based on drag position
-                      duration: Duration(milliseconds: 300),
+                      duration: const Duration(milliseconds: 300),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
 
 
                         children: [
-                          Divider(),
+                          const Divider(),
                           GestureDetector(
                             onTap: () {
                               // Handle call button tap
                             },
                             child: Container(
                               width: double.infinity,
-                              padding: EdgeInsets.all(10),
-                              margin: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.all(10),
+                              margin: const EdgeInsets.symmetric(vertical: 5),
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(5),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     color: Colors.grey,
                                     offset: Offset(0, 5),
@@ -850,12 +849,12 @@ Container(
                                   ),
                                 ],
                               ),
-                              child: Row(
+                              child: const Row(
                                 mainAxisAlignment: MainAxisAlignment.center, // This line was added
 
                                 children: [
                                   Icon(Icons.call, size: 30),
-                                  const SizedBox(width: 10),
+                                  SizedBox(width: 10),
                                   Text('Call', style: TextStyle(fontSize: 16)),
                                 ],
                               ),
@@ -868,12 +867,12 @@ Container(
                             },
                             child: Container(
                               width: double.infinity,
-                              padding: EdgeInsets.all(10),
-                              margin: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.all(10),
+                              margin: const EdgeInsets.symmetric(vertical: 5),
                               decoration: BoxDecoration(
                                 color: Colors.green,
                                 borderRadius: BorderRadius.circular(5),
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     color: Colors.grey,
                                     offset: Offset(0, 5),
@@ -881,13 +880,13 @@ Container(
                                   ),
                                 ],
                               ),
-                              child: Row(
+                              child: const Row(
                                 mainAxisAlignment: MainAxisAlignment.center, // This line was added
 
                                 children: [
 
                                   Icon(Icons.message, size: 30, color: Colors.white),
-                                  const SizedBox(width: 10),
+                                  SizedBox(width: 10),
                                   Text('Message', style: TextStyle(fontSize: 16, color: Colors.white)),
                                 ],
                               ),

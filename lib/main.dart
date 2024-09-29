@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/home.dart'; // Make sure to create this file and HomePage widget
+// Make sure to create this file and HomePage widget
+import 'package:myapp/screens/init.dart';
+
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,12 +22,14 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -42,9 +48,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     _animation = Tween<double>(begin: 0.8, end: 1.2).animate(_controller);
 
     // Simulate loading
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => Drawer()),
+        MaterialPageRoute(builder: (context) => HomePage()),
       );
     });
   }
